@@ -22,3 +22,19 @@ def standardize_column_names(df):
         .str.replace(' ', '_')
     )
     return df
+
+# This function fills missing numeric values for price and quantity.
+# Missing values can break calculations, so we replace them with 0 for consistency.
+
+def handle_missing_values(df):
+    df["price"] = df["price"].fillna(0)
+    df["quantity"] = df["quantity"].fillna(0)
+    return df
+
+# This function removes rows with invalid values such as negative price or quantity.
+# Negative numbers are data entry errors and should not be included.
+
+def remove_invalid_rows(df):
+    df = df[(df["price"] >= 0) & (df["quantity"] >= 0)]
+    return df
+
