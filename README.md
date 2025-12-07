@@ -1,1 +1,7 @@
-# ism2411-data-cleaning-copilot
+This project shows how I cleaned a messy sales dataset using Python and pandas. The raw file has uneven column names, missing values, strange spacing, and other issues that make it hard to work with. My goal was to turn that messy file into a clean dataset that looks consistent and is ready for analysis. I wrote a script that loads the raw data, cleans the column names, fills missing values, removes impossible values, and then saves a processed file that looks a lot better.
+
+To run the project, open a terminal inside the main folder of this repository and type
+python src/data_cleaning.py
+Once the script runs, it reads the raw file from the data and raw folder and creates a new cleaned file in the data and processed folder. The terminal also prints the first few rows of the cleaned data so you can quickly check that the script worked the way it should.
+
+The main files here are the data_cleaning.py script in the src folder, the raw dataset in data and raw, and the cleaned dataset in data and processed. I also wrote a reflection that explains how I used GitHub Copilot and what I learned while completing this project. This work helped me understand basic data cleaning ideas and how to use AI tools in a responsible way while still staying in control of the code.
